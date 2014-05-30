@@ -12,16 +12,7 @@ class SassEngine < Sinatra::Base
   end
 end
 
-class CoffeeEngine < Sinatra::Base
-  set :views,   File.dirname(__FILE__)    + '/assets/coffeescript'
-
-  get "/javascripts/*.js" do
-    filename = params[:splat].first
-    coffee filename.to_sym
-  end
-end
-
-class Portfolio < Sinatra::Base
+class DownBeat < Sinatra::Base
   use SassEngine
 
   set :bind, '0.0.0.0'
@@ -29,24 +20,24 @@ class Portfolio < Sinatra::Base
   set :public_dir,  File.dirname(__FILE__) + '/public'
 
   get '/' do
-    @page = "homepage"
+    @page = "home"
     slim :home
-  end
-
-  get '/websites' do
-    @page = "websites"
-    slim :websites
-  end
-
-  get '/artwork' do
-    @page = "art"
-    slim :art
   end
 
   get '/about' do
     @page = "about"
     slim :about
   end
+
+  get '/contact' do
+    @page = "contact"
+    slim :contact
+  end
+
+  get '/media' do
+    @page = "media"
+    slim :media
+  end
 end
 
-Portfolio.run!
+DownBeat.run!
