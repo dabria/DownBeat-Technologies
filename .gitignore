@@ -37,7 +37,7 @@ build/
 .sass-cache/
 
 #ignore DS_Store
-.DS_Store
+/.DS_Store
 
 # ignore emacs junk
 *~
