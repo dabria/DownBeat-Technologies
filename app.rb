@@ -48,6 +48,11 @@ class DownBeat < Sinatra::Base
     @page = "media"
     slim :media
   end
+
+  get '/team' do
+    @page = "team"
+    slim :media
+
 end
 
 DownBeat.run!
