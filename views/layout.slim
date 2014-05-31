@@ -9,16 +9,13 @@ html
     link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
     link(rel="stylesheet" href="/stylesheets/main.css")
     // link(rel="shortcut icon" type="image/x-icon" href="")
+    script(src="//code.jquery.com/jquery-1.11.1.min.js")
     script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
   body
     nav.navbar.navbar-default(role="navigation")
       .container-fluid
         .navbar-header
-          button.navbar-toggle(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
+          img.logo(alt="logo" src="/img/logo.jpg")
           a.navbar-brand(href="/") DownBeat Technologies
         .collapse.navbar-collapse#bs-example-navbar-collapse-1
           ul.nav.navbar-nav
