@@ -1,16 +1,20 @@
 html
   body
+    background-image: url("/img/gplaypattern.png")
 
     #home
       text-align: center
       padding-top: 17%
       padding-left: 80px
       padding-right: 80px
+
       .frontlogo
         width: 500px
         margin: 25px
+
       .fronttext
-        padding-top: 10px
+        padding-top: 5%
+        font-size: 20px
 
     .frontnav
       display: block
@@ -19,6 +23,7 @@ html
       padding: 10px
       margin-bottom: 40px
       text-align: center
+
       li
         font-size: 18px
         display: inline
@@ -27,15 +32,23 @@ html
     .base
       position: absolute
       z-index: -1
-      margin-bottom: 10px
-      margin-top: -10px
       background: white
-      height: 90%
+      margin-bottom: 40px
+      margin-top: 20px
+      padding: 0 20px 0 20px
+      border: 1px solid #f9f9f9
+
+    #content
+      border-left: 1px solid #ddd
+      border-right: 1px solid #ddd
+      border-bottom: 1px solid #ddd
+      padding: 0 20px
+      margin-bottom: 20px
 
     .navbar
       background: white
       border-radius: 0
-      border: 1px solid white
+      border-bottom: 1px solid #f9f9f9
 
       .navbar-brand::first-letter
         color: #005495
@@ -43,7 +56,22 @@ html
 
       .navbar-brand
         color: black
-        font-size: 24px
+        font-size: 28px
+        font-family: 'Crimson Text'
+        letter-spacing: 0
+        margin-right: 10px
+
+      .line
+        font-size: 32px
+        color: #ddd
+        padding-right: 5px
+
+      a
+        font-size: 18px
+        font-family: 'Open Sans Condensed'
+
+      a:hover
+        color: #005495
 
     .logo
       width: 40px
@@ -52,10 +80,29 @@ html
       margin-top: 5px
 
     .nav-tabs
+      letter-spacing: 0
       padding-top: 20px
 
     h2
       color: #005495
+      font-family: 'Crimson Text'
+      padding-top: 40px
+      margin-bottom: 20px
+      margin-top: 0
 
     ul.intro
       list-style: decimal
+      font-size: 18px
+      letter-spacing: .03em
+      font-family: roboto
+
+    a
+      letter-spacing: 0.1em
+      color: #005495
+      font-family: 'Open Sans Condensed'
+
+    p
+      font-size: 18px
+      letter-spacing: .03em
+      padding-bottom: 7px
+      font-family: roboto
