@@ -29,6 +29,10 @@ class DownBeat < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/views'
   set :public_dir, File.dirname(__FILE__) + '/public'
 
+  before do
+    @navbar = slim :navbar
+  end
+
   get '/' do
     @page = "home"
     slim :home
@@ -51,7 +55,8 @@ class DownBeat < Sinatra::Base
 
   get '/team' do
     @page = "team"
-    slim :media
+  end
+
 
 end
 
