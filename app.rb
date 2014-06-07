@@ -30,7 +30,7 @@ class DownBeat < Sinatra::Base
   set :public_dir, File.dirname(__FILE__) + '/public'
 
   before do
-    @navbar = slim :navbar
+    @navbar = slim :navbar, layout: false
   end
 
   get '/' do
