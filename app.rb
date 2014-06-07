@@ -43,6 +43,11 @@ class DownBeat < Sinatra::Base
     slim :about
   end
 
+  get '/beatmachine' do
+    @page = "beatmachine"
+    slim :beatmachine
+  end
+
   get '/contact' do
     @page = "contact"
     slim :contact
