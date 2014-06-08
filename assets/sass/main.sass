@@ -1,133 +1,138 @@
-html
-  body
-    background-image: url("/img/gplaypattern.png")
+$border: #f9f9f9
+$accent: #ddd
+$logoblue: #005495
+$othertext: #777
 
-    #home
-      text-align: center
-      padding-top: 100px
-      padding-left: 80px
-      padding-right: 80px
+$link: 'Open Sans Condensed'
+$paragraph: 'pt sans'
+$header: 'Crimson Text'
 
-      hr
-        border-color: #ddd
+body
+  background-image: url("/img/gplaypattern.png")
 
-      .frontnav
-        display: block
-        list-style: none
-        padding: 10px
-        text-align: center
+.navbar
+  background: white
+  border-radius: 0
+  border-bottom: 1px solid $border
+  margin-left: -12px
+  margin-bottom: 0
 
-        li
-          font-size: 20px
-          display: inline
-          padding: 0 40px
+  .dropdown-menu
+    border: 1px solid $border
 
-      .frontlogo
-        width: 500px
+    a:hover
+      background: $border
 
-      .fronttext
-        font-size: 16px
-        padding-top: 15px
-        padding-bottom: 100px
-        font-style: italic
+  .navbar-brand
+    padding: 2px 5px 0 5px
+    border-right: 1px solid $accent
+    border-left: 1px solid $accent
 
-    .base
-      background: white
-      margin-bottom: 40px
-      margin-top: 20px
-      padding: 0 20px 20px 20px
-      border: 1px solid #f9f9f9
+    .logo
+      width: 180px
+      float: left
+      margin: 0 15px
 
-      #content
-        border-left: 1px solid #ddd
-        border-right: 1px solid #ddd
-        border-bottom: 1px solid #ddd
-        padding: 0 20px
-        margin-bottom: 20px
-
-      .email
-        font-size: 20px
-        font-family: 'Open Sans Condensed'
-
-    #gallery
-      .caption
-        p
-          font-size: 14px
-          text-align: center
-      img
-        height: 180px
-        padding: 20px
-
-    .navbar
-      background: white
-      border-radius: 0
-      border-bottom: 1px solid #f9f9f9
-      margin-left: -12px
-
-      .dropdown-menu
-        border: 1px solid #f9f9f9
-
-      .navbar-brand
-        padding-right: 5px
-        padding-left: 5px
-        border-right: 1px solid #ddd
-        border-left: 1px solid #ddd
-
-        .logo
-          width: 180px
-          float: left
-          margin: 0 15px
-          margin-top: -12px
-
-      .navbar-nav
-        padding-left: 10px
-        a
-          font-size: 20px
-          font-family: 'Open Sans Condensed'
-          padding-left: 30px
-
-      a:hover
-        color: #005495
-
-    .nav-tabs
-      letter-spacing: 0
-      padding-top: 20px
-      font-size: 16px
-
-      a:hover
-        background: #f9f9f9
-        border: 1px solid #f9f9f9
-        border-bottom: 1px solid #ddd
-
-    h2
-      color: #005495
-      font-family: 'Crimson Text'
-      padding-top: 20px
-      margin-bottom: 20px
-      margin-top: 0
-
-    ul.intro
-      list-style: decimal
-      font-size: 18px
-      letter-spacing: .03em
-      font-family: 'pt sans'
-      padding-bottom: 10px
-
+  .navbar-nav
+    padding-left: 10px
     a
-      letter-spacing: 0.1em
-      color: #005495
-      font-family: 'Open Sans Condensed'
+      font-size: 20px
+      font-family: $link
+      padding-left: 30px
 
-    p
-      font-size: 18px
-      letter-spacing: .03em
-      font-family: 'pt sans'
-      line-height: 1.6em
+.navbar-default
+  .navbar-nav
+    &>.open
+      &>a, &>a:hover, &>a:focus
+        background: $border
 
-  footer
-    text-align: right
-    color: #777
+#home
+  text-align: center
+  padding: 100px 80px 100px 80px
 
-    h6
-      padding: 0 0 10px 0
-      margin: 0
+  .frontlogo
+    width: 500px
+
+  .fronttext
+    font-size: 16px
+    margin: 15px
+    font-style: italic
+    color: $othertext
+
+.base
+  background: white
+  margin-top: 40px
+  margin-bottom: 40px
+  padding: 20px
+  border: 1px solid $border
+
+  #content
+    border-left: 1px solid $accent
+    border-right: 1px solid $accent
+    border-bottom: 1px solid $accent
+    padding: 0 20px
+    margin-bottom: 20px
+
+  .email
+    font-size: 20px
+    font-family: $link
+
+  #gallery
+    .caption
+      p
+        font-size: 14px
+        text-align: center
+    img
+      height: 180px
+      padding: 20px
+
+  .nav-tabs
+    letter-spacing: 0
+    font-size: 16px
+
+    a:hover
+      background: $border
+      border: 1px solid $border
+      border-bottom: 1px solid $accent
+
+  h2
+    color: $logoblue
+    font-family: $header
+    margin: 0 0 10px 0
+
+  h2.nav-tab-fix
+    padding-top: 20px
+
+  ul.intro
+    list-style: decimal
+    font-size: 18px
+    letter-spacing: .03em
+    font-family: $paragraph
+    padding-bottom: 10px
+
+a
+  letter-spacing: 0.1em
+  font-family: $link
+
+a:hover
+  color: $logoblue
+
+p
+  font-size: 18px
+  letter-spacing: .03em
+  font-family: $paragraph
+  line-height: 1.6em
+
+hr
+  border-color: $accent
+
+footer
+  text-align: right
+  color: $othertext
+  
+  .foot
+    padding-right: 0
+
+  h6
+    padding: 0 0 10px 0
+    margin: 0
