@@ -17,11 +17,17 @@ body
   margin-left: -12px
   margin-bottom: 0
 
+  a
+    font-size: 20px
+    font-family: $link
+    padding-left: 30px
+
   .dropdown-menu
     border: 1px solid $border
 
     a:hover
       background: $border
+      color: $logoblue
 
   .navbar-brand
     padding: 2px 5px 0 5px
@@ -33,15 +39,14 @@ body
       float: left
       margin: 0 15px
 
-  .navbar-nav
-    padding-left: 10px
-    a
-      font-size: 20px
-      font-family: $link
-      padding-left: 30px
-
 .navbar-default
   .navbar-nav
+    padding: 0 10px 0 10px
+
+    li
+      &>a:hover
+        color: $logoblue
+
     &>.open
       &>a, &>a:hover, &>a:focus
         background: $border
@@ -113,9 +118,7 @@ body
 a
   letter-spacing: 0.1em
   font-family: $link
-
-a:hover
-  color: $logoblue
+  color: $othertext
 
 p
   font-size: 18px
