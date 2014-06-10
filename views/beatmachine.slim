@@ -1,43 +1,45 @@
 == @navbar
-.col-sm-8.col-sm-offset-2.base
-  ul.nav.nav-tabs
-    li.active
-      a(href="#beattab" data-toggle="tab")The Beat Machine
-    li
-      a(href="#introtab" data-toggle="tab")Introduction
-    li
-      a(href="#techtab" data-toggle="tab")Technical Specifications
-    li
-      a(href="#uitab" data-toggle="tab")User Interface
-    li
-      a(href="#researchtab" data-toggle="tab")Research &amp; Development
-  #content
-    .tab-content
-      .tab-pane.active#beattab
-        h2.nav-tab-fix The Beat Machine
-        p The Beat Machine by Downbeat Technologies is a simple and cost effective alternative to high-end percussion controllers. Drummers can customize the Beat Machine’s 6 impact pads to play the sounds of their choice. A graphical interface and wireless control through an Android app dramatically simplifies the user interface. The Beat Machine’s core functionality can be extended through flash memory storage and USB connectivity, providing virtually unlimited sonic and memory capabilities.
-      .tab-pane#introtab
-        h2.nav-tab-fix Introduction
-        p The genesis of this project was team member John McNeely’s desire to have a percussion controller for combined electronic and acoustic drumming. In his view, there are two enduring problems in the world of music technology for drummers:
-        ul.intro
-          li The inverse relationship between price and sound quality, and 
-          li The unnecessary complexity so often built into electronic percussion. 
-        p Perceiving a gap in the market, he created of Downbeat Technologies with a skilled team of programmers and circuit architects to satisfy the following question: How can we make a percussion controller that’s not only pleasing to the ears, but simple to use and affordable? The answer is the Beat Machine.
-        p High-end percussion controllers sell for hundreds of dollars. They typically come pre-loaded with hundreds or even thousands of samples and pre-configured drum kit sounds. They feature brick-like user manuals. They are difficult to navigate, and their complexity makes onboard features challenging to locate and use on-the-fly, since one must delve through layers of sub-menus to access their specialized features. 
-        p Based on John’s experience in live and studio music production, he felt that amateur percussionists rarely need this level of complexity. Most drummers will choose a handful of preferred sounds and settings and ignore the better part of what’s available on their machines.On the other hand, there is a well-populated realm of controller-only drum machines. The controllers act as triggers for pre-configured sounds and samples. These devices are inexpensive and simple, but have no onboard storage, audio output, or user-customizable features. They are useful in studio applications and settings where a drummer’s part is strictly defined, but they have less potential during live performances when improvisation or freedom to deviate from a template is desirable.
-        p Enter Downbeat’s Beat Machine. The Beat Machine is the result of seeking a middle ground in this device category. It provides an electronic percussion solution that is highly customizable and very simple to navigate. The device will be controlled with a graphical user interface (GUI) through an Android app with intuitive, straightforward menus. The Beat Machine is tailored to the quality demands of a professional musician, but has a much simpler interface and control scheme than current high-end competitors.
-      .tab-pane#techtab
-        h2.nav-tab-fix Technical Specifications
-        h4 General Principle of Operation
-        p The operating principle for the Beat Machine is based on the response of a piezoelectric element underneath each pad. Piezoelectric devices translate pressure (a drumstick hit) into usable voltage. Hitting each pad generates a spike in voltage which is filtered, digitized, and used to trigger a sample or loop playback.
-        h4 Hardware and Software
-        p A minimum threshold, set electronically, will determine how hard the pads must be hit to produce a sound. This prevents the device from being erroneously triggered. The input signal is then amplified to specified voltage range. The resultant signal is fed into an analog-to-digital converter (ADC) which translates a drumstick hit to a digital pulse. The ADC detects how hard the pad has been hit and plays that pad’s sound at the appropriate volume with no audible delay. Each impact pad will have its own dedicated ADC channel, which allows a unique sound to be played on each pad, as chosen by the user.
-        p The samples and electronic loops that are triggered by hitting the pads are pre-selected and loaded onto a USB thumb drive, which allows considerable memory space to expand the Beat Machine’s sonic palette. The contents of the drive will be read by the CPU – the Beat Machine’s onboard computer – and presented in a menu on the Android app.
-        p Hitting a pad also generates a MIDI signal. MIDI stands for Musical Instrument Digital Interface, which is essentially a remote control for musical information. Using an optional MIDI over USB connection, the Beat Machine can be used to trigger external electronic instruments or sound files stored on a computer without having to pre-load samples onto the pads.
-      .tab-pane#uitab
-        h2.nav-tab-fix The User Interface
-        p Beat Machine players will interface with the system through an Android application, and with their home or studio computers. Using the app, drummers can choose from existing files stored in memory or record a new audio file. Audio libraries can also be accessed through stand-alone USB or the Beat Machine’s MIDI interface. The app also features a playback screen where the user can review their creations and manage files. 
-        p The Beat Machine will talk to the Android application via Bluetooth, which allows users to select sounds and manage files remotely. This wireless connection gives Beat Machine players quick, on-the-go control of their sounds and music sequences without having to load up a computer or specialized software – just tap and go.
-      .tab-pane#researchtab
-        h2.nav-tab-fix Research and Development
-        p This project is based on principles and knowledge that the Downbeat team has acquired through Camosun College’s Electronics Engineering Technology program, and through the members’ respective co-op work placements.
+.smallerResFixer
+  .col-sm-2
+  .col-sm-8.base
+    ul.nav.nav-tabs
+      li.active
+        a(href="#beattab" data-toggle="tab")The Beat Machine
+      li
+        a(href="#introtab" data-toggle="tab")Introduction
+      li
+        a(href="#techtab" data-toggle="tab")Technical Specs
+      li
+        a(href="#uitab" data-toggle="tab")User Interface
+      li
+        a(href="#researchtab" data-toggle="tab")Research &amp; Development
+    #content
+      .tab-content
+        .tab-pane.active#beattab
+          h2.nav-tab-fix The Beat Machine
+          p The Beat Machine by Downbeat Technologies is a simple and cost effective alternative to high-end percussion controllers. Drummers can customize the Beat Machine’s 6 impact pads to play the sounds of their choice. A graphical interface and wireless control through an Android app dramatically simplifies the user interface. The Beat Machine’s core functionality can be extended through flash memory storage and USB connectivity, providing virtually unlimited sonic and memory capabilities.
+        .tab-pane#introtab
+          h2.nav-tab-fix Introduction
+          p The genesis of this project was team member John McNeely’s desire to have a percussion controller for combined electronic and acoustic drumming. In his view, there are two enduring problems in the world of music technology for drummers:
+          ul.intro
+            li The inverse relationship between price and sound quality, and 
+            li The unnecessary complexity so often built into electronic percussion. 
+          p Perceiving a gap in the market, he created of Downbeat Technologies with a skilled team of programmers and circuit architects to satisfy the following question: How can we make a percussion controller that’s not only pleasing to the ears, but simple to use and affordable? The answer is the Beat Machine.
+          p High-end percussion controllers sell for hundreds of dollars. They typically come pre-loaded with hundreds or even thousands of samples and pre-configured drum kit sounds. They feature brick-like user manuals. They are difficult to navigate, and their complexity makes onboard features challenging to locate and use on-the-fly, since one must delve through layers of sub-menus to access their specialized features. 
+          p Based on John’s experience in live and studio music production, he felt that amateur percussionists rarely need this level of complexity. Most drummers will choose a handful of preferred sounds and settings and ignore the better part of what’s available on their machines.On the other hand, there is a well-populated realm of controller-only drum machines. The controllers act as triggers for pre-configured sounds and samples. These devices are inexpensive and simple, but have no onboard storage, audio output, or user-customizable features. They are useful in studio applications and settings where a drummer’s part is strictly defined, but they have less potential during live performances when improvisation or freedom to deviate from a template is desirable.
+          p Enter Downbeat’s Beat Machine. The Beat Machine is the result of seeking a middle ground in this device category. It provides an electronic percussion solution that is highly customizable and very simple to navigate. The device will be controlled with a graphical user interface (GUI) through an Android app with intuitive, straightforward menus. The Beat Machine is tailored to the quality demands of a professional musician, but has a much simpler interface and control scheme than current high-end competitors.
+        .tab-pane#techtab
+          h2.nav-tab-fix Technical Specifications
+          h4 General Principle of Operation
+          p The operating principle for the Beat Machine is based on the response of a piezoelectric element underneath each pad. Piezoelectric devices translate pressure (a drumstick hit) into usable voltage. Hitting each pad generates a spike in voltage which is filtered, digitized, and used to trigger a sample or loop playback.
+          h4 Hardware and Software
+          p A minimum threshold, set electronically, will determine how hard the pads must be hit to produce a sound. This prevents the device from being erroneously triggered. The input signal is then amplified to specified voltage range. The resultant signal is fed into an analog-to-digital converter (ADC) which translates a drumstick hit to a digital pulse. The ADC detects how hard the pad has been hit and plays that pad’s sound at the appropriate volume with no audible delay. Each impact pad will have its own dedicated ADC channel, which allows a unique sound to be played on each pad, as chosen by the user.
+          p The samples and electronic loops that are triggered by hitting the pads are pre-selected and loaded onto a USB thumb drive, which allows considerable memory space to expand the Beat Machine’s sonic palette. The contents of the drive will be read by the CPU – the Beat Machine’s onboard computer – and presented in a menu on the Android app.
+          p Hitting a pad also generates a MIDI signal. MIDI stands for Musical Instrument Digital Interface, which is essentially a remote control for musical information. Using an optional MIDI over USB connection, the Beat Machine can be used to trigger external electronic instruments or sound files stored on a computer without having to pre-load samples onto the pads.
+        .tab-pane#uitab
+          h2.nav-tab-fix The User Interface
+          p Beat Machine players will interface with the system through an Android application, and with their home or studio computers. Using the app, drummers can choose from existing files stored in memory or record a new audio file. Audio libraries can also be accessed through stand-alone USB or the Beat Machine’s MIDI interface. The app also features a playback screen where the user can review their creations and manage files. 
+          p The Beat Machine will talk to the Android application via Bluetooth, which allows users to select sounds and manage files remotely. This wireless connection gives Beat Machine players quick, on-the-go control of their sounds and music sequences without having to load up a computer or specialized software – just tap and go.
+        .tab-pane#researchtab
+          h2.nav-tab-fix Research and Development
+          p This project is based on principles and knowledge that the Downbeat team has acquired through Camosun College’s Electronics Engineering Technology program, and through the members’ respective co-op work placements.
