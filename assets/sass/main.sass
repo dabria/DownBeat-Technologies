@@ -1,9 +1,10 @@
+// Colour variables
 $border: #f9f9f9
 $accent: #ddd
 $logoblue: #0047fa
 $othertext: #777
 $linkcolour: #000
-
+// Font variables
 $link: 'Open Sans Condensed'
 $paragraph: 'pt sans'
 $header: 'Crimson Text'
@@ -11,6 +12,7 @@ $header: 'Crimson Text'
 body
   background-image: url("/img/gplaypattern.png")
 
+// Navbar Goodies -----------------------------------------------------
 .navbar
   background: white
   border-radius: 0
@@ -19,7 +21,6 @@ body
   margin-bottom: 0
   @media screen and (max-width: 1024px)
     margin-left: 0
-
   a
     font-size: 20px
     font-family: $link
@@ -28,60 +29,52 @@ body
       font-size: 18px
     @media screen and (max-width: 815px)
       font-size: 16px
-
   .navbar-collapse
     border-color: $border
-
   .dropdown-menu
     border: 1px solid $border
-
     a:hover
       background: $border
       color: $logoblue
-
   .navbar-brand
     padding: 2px 5px 0 5px
     border-right: 1px solid $accent
     border-left: 1px solid $accent
     @media screen and (max-width: 815px)
       padding: 5px 0 0 0
-
     .logo
-      width: 180px
       float: left
       margin: 0 15px
       @media screen and (max-width: 815px)
         width: 160px
-
 .navbar-default
   .navbar-nav
     padding: 0 10px 0 10px
-
     li
       &>a:hover
         color: $logoblue
-
     &>.open
       &>a, &>a:hover, &>a:focus
         background: $border
 
+// Homepage special stuff --------------------------------------------
 #home
   text-align: center
   padding: 100px 80px 100px 80px
-
   .frontlogo
     width: 90%
-
   .fronttext
     font-size: 16px
     margin: 15px
     font-style: italic
     color: $othertext
 
+// Kills column so content fit better on small screens
 .col-sm-2
   @media screen and (max-width: 1024px)
     display: none
 
+// Helps to resize on smaller screens
 .smallerResFixer
   @media screen and (max-width: 1024px)
     margin: 0 40px
@@ -90,6 +83,7 @@ body
   @media screen and (max-width: 500px)
     margin: 0
 
+  // Main div and everything inside ----------------------------------
   .base
     background: white
     margin-top: 40px
@@ -98,26 +92,51 @@ body
     border: 1px solid $border
     @media screen and (max-width: 1024px)
       width: 100%
+    h2
+      color: $logoblue
+      font-family: $header
+      margin: 0 0 10px 0
 
-    #content
+    // The Beat Machine about page
+    .nav-tabs
+      letter-spacing: 0
+      font-size: 16px
+      @media screen and (max-width: 1163px)
+        font-size: 14px
+      @media screen and (max-width: 1047px)
+        font-size: 13px
+      a
+        @media screen and (max-width: 750px)
+          padding: 7px
+      a:hover
+        color: $logoblue
+        background: $border
+        border: 1px solid $border
+        border-bottom: 1px solid $accent
+        @media screen and (max-width: 500px)
+          border-bottom: none
+    h2.nav-tab-fix
+      padding-top: 20px
+    .beatmachineabout
       border-left: 1px solid $accent
       border-right: 1px solid $accent
       border-bottom: 1px solid $accent
       padding: 0 20px
-
       .tab-content
         padding-bottom: 10px
+    ul.intro
+      list-style: decimal
+      font-size: 18px
+      letter-spacing: .03em
+      font-family: $paragraph
+      padding: 10px auto
 
-    .email
-      font-size: 20px
-      font-family: $link
-
+    // The Media page
     #gallery
       @media screen and (max-width: 750px)
         padding: 10px
       @media screen and (max-width: 625px)
         padding: 5px
-
       .caption
         p
           font-size: 13px
@@ -126,9 +145,7 @@ body
             font-size: 12px
           @media screen and (max-width: 574px)
             font-size: 11px
-
       img
-        height: 180px
         padding: 20px
         @media screen and (max-width: 750px)
           height: 150px
@@ -137,46 +154,18 @@ body
           height: 110px
           padding: 5px
 
-    .nav-tabs
-      letter-spacing: 0
-      font-size: 16px
-      @media screen and (max-width: 1163px)
-        font-size: 14px
-      @media screen and (max-width: 1047px)
-        font-size: 13px
-
-      a
-        @media screen and (max-width: 750px)
-          padding: 7px
-
+    // Contact page
+    .email
+      font-size: 20px
+      font-family: $link
       a:hover
         color: $logoblue
-        background: $border
-        border: 1px solid $border
-        border-bottom: 1px solid $accent
-        @media screen and (max-width: 500px)
-          border-bottom: none
 
-    h2
-      color: $logoblue
-      font-family: $header
-      margin: 0 0 10px 0
-
-    h2.nav-tab-fix
-      padding-top: 20px
-
-    ul.intro
-      list-style: decimal
-      font-size: 18px
-      letter-spacing: .03em
-      font-family: $paragraph
-      padding-bottom: 10px
-
+// Generic defaults
 a
   letter-spacing: 0.1em
   font-family: $link
   color: $othertext
-
 p
   font-size: 18px
   letter-spacing: .03em
@@ -184,19 +173,17 @@ p
   line-height: 1.6em
   @media screen and (max-width: 1163px)
     font-size: 16px
-
 hr
   border-color: $accent
 
+// Footer -------------------------------------------------------
 footer
   text-align: right
   color: $othertext
   @media screen and (max-width: 1024px)
     text-align: center
-
   .foot
     padding-right: 0
-
   h6
     padding: 0 0 10px 0
     margin: 0
