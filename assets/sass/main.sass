@@ -9,8 +9,24 @@ $link: 'Open Sans Condensed'
 $paragraph: 'pt sans'
 $header: 'Crimson Text'
 
+// Generic defaults
 body
   background-image: url("/img/gplaypattern.png")
+a
+  letter-spacing: 0.1em
+  font-family: $link
+  color: $othertext
+p
+  font-size: 18px
+  letter-spacing: .03em
+  font-family: $paragraph
+  line-height: 1.6em
+  @media screen and (max-width: 1163px)
+    font-size: 16px
+hr
+  border-color: $accent
+h2
+  padding-bottom: 10px
 
 // Navbar Goodies -----------------------------------------------------
 .navbar
@@ -135,6 +151,22 @@ body
       font-family: $paragraph
       padding: 10px auto
 
+    // About main page
+    .team
+      list-style: disc
+      font-size: 18px
+      letter-spacing: .03em
+      font-family: $paragraph
+      padding: 10px auto
+      li
+        text-decoration: underline
+      .teamdescription
+        list-style: none
+        padding-left: 0
+        margin-bottom: 10px
+        li
+          text-decoration: initial
+
     // The Media page
     .gallery
       @media screen and (max-width: 750px)
@@ -164,21 +196,6 @@ body
       font-family: $link
       a:hover
         color: $logoblue
-
-// Generic defaults
-a
-  letter-spacing: 0.1em
-  font-family: $link
-  color: $othertext
-p
-  font-size: 18px
-  letter-spacing: .03em
-  font-family: $paragraph
-  line-height: 1.6em
-  @media screen and (max-width: 1163px)
-    font-size: 16px
-hr
-  border-color: $accent
 
 // Footer -------------------------------------------------------
 footer
